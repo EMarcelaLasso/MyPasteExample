@@ -30,10 +30,11 @@ namespace CreatePaste.Tests
             string pasteCode = "Hello from WebDriver";
             string pasteExp = "10 Minutes";
             string pasteName = "helloweb";
+            string message = "Your guest paste has been posted";
             Driver.Url = "https://pastebin.com/";
             PastePage createNewPaste = new PastePage(Driver);
             createNewPaste.CreateNewPaste(pasteCode, pasteExp, pasteName);
-            createNewPaste.ValidatePaste("Your guest paste has been posted", pasteName);
+            createNewPaste.ValidatePaste(message, pasteName);
         }
     }
 }
